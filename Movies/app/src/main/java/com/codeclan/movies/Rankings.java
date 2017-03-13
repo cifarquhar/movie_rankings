@@ -28,4 +28,14 @@ public class Rankings {
         movies.remove(9);
         movies.add(newMovie);
     }
+
+    public Movie findByTitle(String movieTitle) {
+        for (int i = 0; i < movies.size(); i++) {
+            if (movies.get(i).title == movieTitle) {
+                return movies.get(i);
+            }
+        }
+        return null;
+    }
+
 }

@@ -71,7 +71,12 @@ public class RankingsTest {
         movieRankings.addNewMovie(replacementMovie);
         Movie checkMovie = movieRankings.findByRank(10);
         assertEquals("Iron Man",checkMovie.getTitle());
+    }
 
+    @Test
+    public void canFindMovieByTitle(){
+        Movie testMovie = movieRankings.findByTitle("Star Wars");
+        assertEquals(movie1,testMovie);
     }
 
 }
