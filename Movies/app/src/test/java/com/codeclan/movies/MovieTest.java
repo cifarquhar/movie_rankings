@@ -12,13 +12,7 @@ public class MovieTest {
     Movie movie1;
     Movie movie2;
     Movie movie3;
-    Movie movie4;
-    Movie movie5;
-    Movie movie6;
-    Movie movie7;
-    Movie movie8;
-    Movie movie9;
-    Movie movie10;
+
 
 
     @Before
