@@ -65,4 +65,13 @@ public class RankingsTest {
 
     }
 
+    @Test
+    public void canAddNewMovie(){
+        Movie replacementMovie = new Movie("Iron Man","Superhero",10);
+        movieRankings.addNewMovie(replacementMovie);
+        Movie checkMovie = movieRankings.findByRank(10);
+        assertEquals("Iron Man",checkMovie.getTitle());
+
+    }
+
 }

@@ -16,7 +16,7 @@ public class Rankings {
 
     public Movie findByRank(int ranking){
         for (int i = 0; i < movies.size(); i++) {
-            if (i == ranking) {
+            if (i == ranking - 1) {
                 return movies.get(i);
             }
         }
@@ -24,6 +24,8 @@ public class Rankings {
     }
 
 
-
-
+    public void addNewMovie(Movie newMovie) {
+        movies.remove(9);
+        movies.add(newMovie);
+    }
 }
