@@ -38,4 +38,21 @@ public class Rankings {
         return null;
     }
 
+    public void moveUp(int rank) {
+        Movie movieMovingUp = movies.get(rank - 1);
+        Movie movieMovingDown = movies.get(rank - 2);
+        movies.set(rank-1,movieMovingDown);
+        movies.set(rank-2,movieMovingUp);
+        movieMovingUp.setRanking(rank - 2);
+        movieMovingDown.setRanking(rank - 1);
+    }
+
+    public void moveDown(int rank) {
+        Movie movieMovingDown = movies.get(rank - 1);
+        Movie movieMovingUp = movies.get(rank);
+        movies.set(rank-1,movieMovingUp);
+        movies.set(rank,movieMovingDown);
+        movieMovingUp.setRanking(rank);
+        movieMovingDown.setRanking(rank - 1);
+    }
 }

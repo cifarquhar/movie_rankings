@@ -79,4 +79,18 @@ public class RankingsTest {
         assertEquals(movie1,testMovie);
     }
 
+    @Test
+    public void movieSwitchedUpRankingChanges(){
+        movieRankings.moveUp(5);
+        Movie switchedMovie = movieRankings.findByRank(4);
+        assertEquals("Toy Story",switchedMovie.getTitle());
+    }
+
+    @Test
+    public void movieSwitchedDownRankingChanges(){
+        movieRankings.moveDown(5);
+        Movie switchedMovie = movieRankings.findByRank(6);
+        assertEquals("Toy Story",switchedMovie.getTitle());
+    }
+
 }
