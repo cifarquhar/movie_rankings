@@ -10,16 +10,23 @@ import static org.junit.Assert.*;
 public class RankingsTest {
 
     Rankings movieRankings;
+    Movie movie1;
 
 
     @Before
     public void Before(){
         movieRankings = new Rankings();
+        movie1 = new Movie("Star Wars","Sci-Fi",1);
     }
 
-    @Test
-    public void newListNotEmpty(){
-        assertNotNull(movieRankings.movies.get(0));
-    }
+//    @Test
+//    public void newListNotEmpty(){
+//        assertNotNull(movieRankings.movies.get(0));
+//    }
+//
+//    @Test
+//    public void canFindMovieRanking(){
+//
+//    }
 
 }
