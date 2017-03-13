@@ -55,5 +55,10 @@ public class MovieTest {
         assertEquals(4,movie1.ranking);
     }
 
+    @Test
+    public void canOverrideToStringMethod(){
+        assertEquals("Title: Star Wars, Genre: Sci-Fi, Ranking: 1",movie1.toString());
+    }
+
 
 }
